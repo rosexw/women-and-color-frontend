@@ -1,6 +1,12 @@
 import React, { PropTypes } from 'react'
 import css from './styles.css'
 
+function PrintCard(string) {
+  return (
+    <div>{string}</div>
+  )
+}
+
 export default function Home () {
   return (
     <div className="container">
@@ -27,7 +33,11 @@ export default function Home () {
           </div>
 
           <div className="col-lg-9">
-            <div className="content-titles">{'Speakers in Toronto for all topics'}</div>
+            <h1 className={css.contentTitles}>Speakers in Toronto for all topics</h1>
+
+            <PrintCard string={'dear'} />
+
+
           </div>
       </div>
     </div>

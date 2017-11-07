@@ -56,18 +56,18 @@
 // Content
 
 .content {
-	height: 1488px;
-	width: 704px;
+	height: 100%; /* 1488px; */
+	width: 100%; /* 704px; */
 }
 
 .contentTitles {
 	height: 40px;
-	width: 469px;
+	width: 100%; /* 469px; */
 	color: #000000;
 	font-family: "Open Sans";
 	font-size: 32px;
 	font-weight: 300;
-	line-height: 40px;
+	/* line-height: 40px; */
 }
 
 .hr {
@@ -76,6 +76,8 @@
 	background-color: #E0E0E0;
 }
 
+
+// Content Card
 .contentCard {
 	height: 176px;
 	width: 704px;
