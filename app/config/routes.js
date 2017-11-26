@@ -1,5 +1,5 @@
 import React from 'react'
-import { HashRouter as Router, Route, Switch } from 'react-router-dom'
+import { Router, Route, Switch } from 'react-router-dom'
 import createHashHistory from 'history/createHashHistory'
 import { AuthenticateContainer, MainContainer, HomeContainer, PageContainer, RegisterContainer, SpeakerContainer } from 'containers'
 
