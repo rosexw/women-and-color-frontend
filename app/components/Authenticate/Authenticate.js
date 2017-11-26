@@ -1,14 +1,18 @@
-import React from 'react'
-import createReactClass from 'create-react-class'
+import React, { PropTypes } from 'react'
+import { FacebookAuthButton } from 'components'
 
-const Authenticate = createReactClass({
-  render () {
-    return (
-      <div>
-        <h1>Authentication</h1>
-      </div>
-    )
-  }
-})
+Authenticate.propTypes = {
+  error:      PropTypes.string.isRequired,
+  isFetching: PropTypes.bool.isRequired,
+  onAuth:     PropTypes.func.isRequired,
+}
 
-export default Authenticate
+export default function Authenticate({onAuth, isFetching, error}) {
+  return (
+    <div>
+      <h1>Authenticate</h1>
+      <FacebookAuthButton isFetching={isFetching} onAuth={onAuth} />
+      {error ? <p>{error}</p> : null}
+    </div>
+  )
+}
