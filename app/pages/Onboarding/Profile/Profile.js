@@ -132,6 +132,36 @@ const Profile = props => {
         </FormField>
 
         <FormField fullWidth className={css.formControl}>
+          <FormLabel component="legend">
+            Do you identify as a member of the LGBTQA+ community?
+          </FormLabel>
+          <RadioGroup
+            aria-label="lgbtqa"
+            name="lgbtqa"
+            value={
+              props.profile.lgbtqa === null ? 'true' : props.profile.lgbtqa.toString()
+            }
+            onChange={generateHandler('lgbtqa')}
+          >
+            <FormControlLabel
+              value="true"
+              control={<Radio color="primary" />}
+              label="Yes"
+            />
+            <FormControlLabel
+              value="false"
+              control={<Radio color="primary" />}
+              label="No"
+            />
+            <FormControlLabel
+              value="false"
+              control={<Radio color="primary" />}
+              label="Prefer not to say"
+            />
+          </RadioGroup>
+        </FormField>
+
+        <FormField fullWidth className={css.formControl}>
           <FormLabel component="legend">What pronouns do you use?</FormLabel>
           <RadioGroup
             aria-label="pronouns"

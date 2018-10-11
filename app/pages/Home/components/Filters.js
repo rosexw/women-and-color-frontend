@@ -149,16 +149,28 @@ class Filters extends Component {
 
             switch (identity.label) {
               case 'All speakers':
-                selected = !searchParams['poc'] && !searchParams['woman'];
+                selected = !searchParams['poc'] && !searchParams['woman'] && !searchParams['lgbtqa'];
                 break;
               case 'Women':
-                selected = !searchParams['poc'] && !!searchParams['woman'];
+                selected = !searchParams['poc'] && !!searchParams['woman'] && !searchParams['lgbtqa'];
+                break;
+              case 'LGBTQA':
+                selected = !searchParams['poc'] && !searchParams['woman'] && !!searchParams['lgbtqa'];
                 break;
               case 'People of color':
-                selected = !!searchParams['poc'] && !searchParams['woman'];
+                selected = !!searchParams['poc'] && !searchParams['woman'] && !searchParams['lgbtqa'];
                 break;
               case 'Women of color':
-                selected = !!searchParams['poc'] && !!searchParams['woman'];
+                selected = !!searchParams['poc'] && !!searchParams['woman'] && !searchParams['lgbtqa'];
+                break;
+              case 'LGBTQA+ People of Color':
+                selected = !!searchParams['poc'] && !searchParams['woman'] && !!searchParams['lgbtqa'];
+                break;
+              case 'LGBTQA+ Women':
+                selected = !searchParams['poc'] && !!searchParams['woman'] && !!searchParams['lgbtqa'];
+                break;
+              case 'LGBTQA+ Women of Color':
+                selected = !!searchParams['poc'] && !!searchParams['woman'] && !!searchParams['lgbtqa'];
                 break;
               default:
                 selected = false;
