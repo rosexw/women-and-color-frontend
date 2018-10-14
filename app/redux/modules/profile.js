@@ -111,6 +111,7 @@ const initialState = {
   isRequesting: false,
   woman: true,
   poc: true,
+  lgbtqa: true,
   pronouns: 'they',
   location: 1,
   error: null,
