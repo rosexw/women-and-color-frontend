@@ -154,7 +154,7 @@ const Profile = props => {
               label="No"
             />
             <FormControlLabel
-              value="false"
+              value="noAnswer"
               control={<Radio color="primary" />}
               label="Prefer not to say"
             />
