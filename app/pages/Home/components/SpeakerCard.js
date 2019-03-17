@@ -44,13 +44,13 @@ const SpeakerCard = ({ speaker, classes }) => {
       <Grid container spacing={16}>
         <Grid item xs={3} md={3}>
           <div className={css.speakerPhoto}>
-          <Link to={speakerProfilePath} className={profilePhoto}>
+          <Link to={speakerProfilePath} className={profilePhoto} target="_blank">
             <img src={speaker.image} alt={name} />
           </Link>
           </div>
         </Grid>
         <Grid item xs={9} md={7} className={css.info}>
-          <Link to={speakerProfilePath}>
+          <Link to={speakerProfilePath} target="_blank">
             <h3 className={css.name}>{name}</h3>
           </Link>
           {title}
@@ -67,6 +67,7 @@ const SpeakerCard = ({ speaker, classes }) => {
               label="View profile"
               component={Link}
               to={speakerProfilePath}
+              target="_blank"
             >
               View profile
             </StyledButton>
